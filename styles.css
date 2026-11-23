@@ -1,0 +1,45 @@
+:root {
+	/* Colours */
+	--colour-darkest: #242527;
+	--colour-primary: #1d0e33;
+	--colour-accent1: #3b6b79;
+	--colour-accent2: #926625;
+	--colour-lightest: #fef4e6;
+	--colour-primary-tint: #97b5be;
+	--colour-darkest-tint: #36383b;
+	--colour-lightest-shade: #bda991;
+
+	/*Spacing units*/
+	--spacing-s1: 0.125rem;
+	--spacing-s2: 0.25rem;
+	--spacing-s3: 0.5rem;
+	--spacing-s4: 0.75rem;
+	--spacing-m1: 1rem;
+	--spacing-m2: 1.25rem;
+	--spacing-m3: 1.5rem;
+	--spacing-m4: 1.75rem;
+	--spacing-m5: 2rem;
+	--spacing-l1: 3rem;
+	--spacing-l2: 4rem;
+	--spacing-l3: 5rem;
+
+	/*Font families*/
+	--font-headings: "Gloock", serif;
+	--font-body: "Mulish", sans-serif;
+}
+
+/*.gloock-regular {
+  font-family: "Gloock", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// <weight>: Use a value from 200 to 1000
+// <uniquifier>: Use a unique and descriptive class name
+
+.mulish-<uniquifier> {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}*/
