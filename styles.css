@@ -1,33 +1,3 @@
-:root {
-	/* Colours */
-	--colour-darkest: #242527;
-	--colour-primary: #1d0e33;
-	--colour-accent1: #3b6b79;
-	--colour-accent2: #926625;
-	--colour-lightest: #fef4e6;
-	--colour-primary-tint: #97b5be;
-	--colour-darkest-tint: #36383b;
-	--colour-lightest-shade: #bda991;
-
-	/*Spacing units*/
-	--spacing-s1: 0.125rem;
-	--spacing-s2: 0.25rem;
-	--spacing-s3: 0.5rem;
-	--spacing-s4: 0.75rem;
-	--spacing-m1: 1rem;
-	--spacing-m2: 1.25rem;
-	--spacing-m3: 1.5rem;
-	--spacing-m4: 1.75rem;
-	--spacing-m5: 2rem;
-	--spacing-l1: 3rem;
-	--spacing-l2: 4rem;
-	--spacing-l3: 5rem;
-
-	/*Font families*/
-	--font-headings: "Gloock", serif;
-	--font-body: "Mulish", sans-serif;
-}
-
 /*.gloock-regular {
   font-family: "Gloock", serif;
   font-weight: 400;
@@ -43,3 +13,228 @@
   font-weight: <weight>;
   font-style: normal;
 }*/
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+body {
+	background-color: var(--background-light);
+	color: var(--text-primary-light);
+	font-family: var(--font-body);
+	font-size: var(--size-medium);
+	line-height: 1.4;
+  font-optical-sizing: auto;
+	-webkit-font-smoothing: antialiased;
+}
+
+img, picture, svg, canvas {
+	display: block;
+	max-width: 100%;
+}
+
+/* Typography */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-headings);
+	margin-bottom: var(--size-medium);
+	margin-top: 1em;
+	overflow-wrap: break-word;
+	font-weight: 400;
+}
+
+p {
+	overflow-wrap: break-word;
+	margin-bottom: 1em;
+}
+
+.heading-biggest {
+	font-size: 3.25rem;
+	line-height: 1.05;
+	margin-bottom: var(--spacing-s4);
+}
+
+.heading-big {
+	font-size: 2.5rem;
+	line-height: 1.05;
+}
+
+.heading-medium {
+	font-size: 2rem;
+	line-height: 1.05;
+}
+
+.heading-small {
+	font-size: 1.5rem;
+	line-height: 1.15;
+}
+
+.heading-smallest {
+	font-size: 1.25rem;
+	line-height: 1.15;
+}
+
+.big {
+	font-size: 1.25rem;
+}
+
+.medium {
+	font-size: 1.125rem;
+}
+
+.small {
+	font-size: 1rem;
+}
+
+.smallest {
+	font-size: 0.875rem;
+}
+
+
+@media screen and (min-width: 576px) {
+
+	.heading-biggest {
+		font-size: 5rem;
+	}
+
+	.heading-big {
+		font-size: 3.5rem;
+	}
+
+	.heading-medium {
+		font-size: 2.5rem;
+	}
+
+	.heading-small {
+		font-size: 2rem;
+		line-height: 1.05;
+	}
+
+	.heading-smallest {
+		font-size: 1.5rem;
+	}
+
+	.big {
+		font-size: 1.5rem;
+	}
+
+	.medium {
+		font-size: 1.25rem;
+	}
+
+	.small {
+		font-size: 1rem;
+	}
+
+	.smallest {
+		font-size: 0.75rem;
+	}
+}
+
+.label {
+	text-transform: uppercase;
+	font-size: var(--size-smallest);
+	line-height: 1.2;
+	letter-spacing: 0.04em;
+}
+
+/* Interaction */
+
+button {
+	font: inherit;
+}
+
+p a {
+	color: var(--interaction-light);
+	text-decoration: underline solid 0.15em var(--colour-accent1);
+	text-underline-offset: 0.15em;
+	transition-duration: var(--std-transition);
+}
+
+p a:hover {
+	text-underline-offset: 0.35em;
+}
+
+/* Features */
+
+.container {
+	max-width: 72rem; /* 1,152px */
+	padding-left: var(--std-indent);
+	padding-right: var(--std-indent);
+}
+
+.container p {
+	max-width: 37.5rem; /* 600px*/
+}
+
+.nested > *:first-child {
+	margin-top: 0;
+}
+
+.nested > *:last-child {
+	margin-bottom: 0;
+}
+
+.content {
+	padding-top: var(--spacing-l2);
+	padding-bottom: var(--spacing-l2);
+}
+
+.splash-hero {
+	background-color: var(--colour-accent1);
+	color: var(--colour-lightest);
+	height: 60vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-top: var(--spacing-m3);
+	padding-bottom: var(--spacing-l2);
+}
+
+.card-row {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-m3);
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: var(--background-primary);
+	border-radius: var(--spacing-m1);
+	border: solid var(--spacing-s0) var(--border-dark-subtle);
+	color: var(--text-secondary-dark);
+	text-decoration: none;
+	aspect-ratio: 4 / 3;
+	padding: var(--spacing-m2);
+}
+
+.card, .card * {
+	transition-duration: 1.5s;
+}
+
+.card-details {
+}
+
+.card-title {
+	margin-bottom: var(--spacing-s3);
+	color: var(--text-primary-dark);
+}
+
+.card:hover, .card:focus {
+	background-color: var(--background-accent-2);
+	color: var(--text-primary-dark);
+}
+
+.tag {
+	display: inline-flex;
+	background-color: var(--background-light);
+	color: var(--text-primary-light);
+	border-radius: var(--spacing-s2);
+	padding: 0.1875rem var(--spacing-s3) var(--spacing-s1) var(--spacing-s3);
+}

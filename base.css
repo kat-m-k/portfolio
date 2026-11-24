@@ -1,0 +1,86 @@
+/*Breakpoints
+	xs: 375px;
+	sm: 576px;
+	md: 768px;
+	lg: 992px;
+	xl: 1200px;
+	xxl: 1400px;
+*/
+
+:root {
+	/* Colours */
+	--colour-darkest: #242527;
+	--colour-primary: #1d0e33;
+	--colour-accent1: #3b6b79;
+	--colour-accent2: #926625;
+	--colour-lightest: #fef4e6;
+	--colour-primary-tint: #97b5be;
+	--colour-darkest-tint: #36383b;
+	--colour-lightest-shade: #bda991;
+	--white: #ffffff;
+
+	/*Aliases*/
+	--background-light: var(--colour-lightest);
+	--background-dark: var(--colour-darkest);
+	--background-primary: var(--colour-primary);
+	--background-accent: var(--colour-accent1);
+	--background-accent-2: var(--colour-accent2);
+
+	--text-primary-light: var(--colour-darkest);
+	--text-primary-dark: var(--colour-lightest);
+	--text-secondary-light: var(--colour-darkest-tint);
+	--text-secondary-dark: var(--colour-lightest-shade);
+
+	--border-light: var(--colour-darkest-tint);
+	--border-dark: var(--colour-lightest-shade);
+	--border-light-subtle: color-mix(in srgb, var(--colour-darkest-tint) 20%, transparent);
+	--border-dark-subtle: color-mix(in srgb, var(--colour-lightest-shade) 20%, transparent);
+
+	--interaction-light: var(--colour-primary);
+	--interaction-dark: var(--colour-primary-tint);
+
+	/*Spacing units*/
+	--spacing-s0: 0.0625rem; /* 1px */
+	--spacing-s1: 0.125rem; /* 2px */
+	--spacing-s2: 0.25rem; /* 4px */
+	--spacing-s3: 0.5rem; /* 8px */
+	--spacing-s4: 0.75rem; /* 12px */
+	--spacing-m1: 1rem; /* 16px */
+	--spacing-m2: 1.25rem; /* 20px */
+	--spacing-m3: 1.5rem; /* 24px */
+	--spacing-m4: 1.75rem; /* 28px */
+	--spacing-m5: 2rem; /* 32px */
+	--spacing-l1: 3rem; /* 48px */
+	--spacing-l2: 4rem; /* 64px */
+	--spacing-l3: 5rem; /* 80px */
+
+	/*Font families*/
+	--font-headings: "Gloock", serif;
+	--font-body: "Mulish", sans-serif;
+
+	/*font-sizes*/
+	--size-big: 1.25rem;
+	--size-medium: 1.125rem;
+	--size-small: 1rem;
+	--size-smallest: 0.875rem;
+
+	/* Misc */
+
+	--std-indent: var(--spacing-m3);
+
+	@media screen and (min-width: 576px) {
+		--std-indent: var(--spacing-m5);
+	}
+
+	--std-transition: 300ms;
+}
+
+@media screen and (min-width: 576px) {
+	:root {
+		/*font-sizes*/
+		--size-big: 1.5rem;
+		--size-medium: 1.25rem;
+		--size-small: 1rem;
+		--size-smallest: 0.75rem;
+	}
+}
